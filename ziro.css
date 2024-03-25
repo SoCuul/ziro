@@ -16,6 +16,11 @@
     align-items: center;
 }
 
+/* Fix spacing of main shelf titles */
+.main-shelf-title {
+    padding-bottom: 0.375rem;
+}
+
 /* Show white text on browse all section buttons */
 .Type__TypeElement-sc-goli3j-0.TypeElement-canon-type.x-categoryCard-title {
     color: white !important;
@@ -58,6 +63,16 @@
     fill: var(--text-subdued);
 }
 
+/* Fix text size of marketplace text in sidebar */
+a[href="/marketplace"]>span.TypeElement-bodyMediumBold-bold-type {
+    font-size: 16px;
+}
+
+/* Improve spacing around spicetify home config buttons */
+#spicetify-home-config {
+    margin: 1rem auto;
+}
+
 
 /*
 ########################################################################
@@ -76,9 +91,16 @@
     --power-bar-border-color: var(--spice-button-active);
 }
 
+/* Full Screen: Fix placement of icon in now playing bar */
+.fsd-button> {
+    vertical-align: middle;
+}
+
+
 /*
 ########################################################################
 */
+
 
 /* Main theme */
 :root {
