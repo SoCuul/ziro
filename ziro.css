@@ -92,7 +92,7 @@ a[href="/marketplace"]>span.TypeElement-bodyMediumBold-bold-type {
 }
 
 /* Full Screen: Fix placement of icon in now playing bar */
-.fsd-button> {
+.fsd-button>svg {
     vertical-align: middle;
 }
 
