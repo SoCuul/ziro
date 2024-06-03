@@ -1,13 +1,17 @@
-/* Personal additional spotify interface tweaks */
+/***************************************************************/
 
-/* Fix volume bar while using spotify connect */
-.playback-progressbar.playback-progressbar-isInteractive:last-child {
-    top: 0px;
+/*
+ * Section: Home
+*/
+
+/* Improve spacing around spicetify home config buttons */
+#spicetify-home-config {
+    margin: 1rem auto;
 }
 
-/* Fix player bar buttons being black */
-.main-genericButton-button {
-    fill: var(--spice-button);
+/* Improve border radius around home menu shortcuts */
+.view-homeShortcutsGrid-shortcut {
+    border-radius: 5px;
 }
 
 /* Fix show all carousel buttons from being mis-vertical aligned */
@@ -16,34 +20,31 @@
     align-items: center;
 }
 
-/* Fix spacing of main shelf titles */
-.main-shelf-title {
-    padding-bottom: 0.375rem;
-}
+/***************************************************************/
+
+/*
+ * Section: Search
+*/
 
 /* Show white text on browse all section buttons */
-.Type__TypeElement-sc-goli3j-0.TypeElement-canon-type.x-categoryCard-title {
-    color: white !important;
+.MtV402NmdUF5mceSD0Dy {
+    color: white;
 }
 
-/* Vertically center search bar magnifying glass icon */
-.x-searchInput-searchInputSearchIcon {
-    display: flex;
-}
+/***************************************************************/
 
-/* Remove card background from podcast genre/type buttons */
-.E4I5I7G2CfW32hLWZaqE.w4ZoklZWkrsyrVA34vI8 {
-    background: transparent;
-}
-
-/* Correctly vertically center subtext with main text on sidebar */
-.Column {
-    align-items: center;
-}
+/*
+ * Section: Marketplace
+*/
 
 /* Fix spicetify marketplace header overlapping content */
 .marketplace-header {
-    top: 16px;
+    top: 0;
+    padding-bottom: 0.5rem;
+}
+
+.marketplace-header__right {
+    position: absolute !important;
 }
 
 /* Fix colour of marketplace tags */
@@ -52,31 +53,40 @@
     color: var(--spice-main) !important;
 }
 
-/* Fix theming of settings page */
+/***************************************************************/
+
+/*
+ * Section: Settings
+*/
+
+/* Theme equalizer to match rest of page */
+.x-settings-equalizerSection {
+    margin-top: 0.5rem;
+    border-radius: var(--br-2);
+
+    background-color: var(--spice-card);
+}
+
+select[id="desktop.equalizer.preset"] {
+    background-color: var(--spice-button-disabled);
+}
+
+/* Fix theming for input elements */
 .x-settings-input {
     background: var(--spice-card);
     color: var(--spice-button-active)
 }
 
-/* Fix theming of context menu button icons */
-.main-contextMenu-menuItemButton svg {
-    fill: var(--text-subdued);
+/* Fix theming for section titles */
+.x-settings-section>h2 {
+    color: var(--spice-text);
 }
 
-/* Fix text size of marketplace text in sidebar */
-a[href="/marketplace"]>span.TypeElement-bodyMediumBold-bold-type {
-    font-size: 16px;
-}
+/***************************************************************/
 
-/* Improve spacing around spicetify home config buttons */
-#spicetify-home-config {
-    margin: 1rem auto;
-}
-
-/* Fix height of connect bar */
-.main-connectBar-connectBar {
-    height: auto;
-}
+/*
+ * Section: Left Sidebar
+*/
 
 /* Fix vertical & horizontal centering of left sidebar album art */
 .HeaderSideArea {
@@ -94,11 +104,6 @@ a[href="/marketplace"]>span.TypeElement-bodyMediumBold-bold-type {
     padding: 6px 8px;
 }
 
-/* Improve border radius around home menu shortcuts */
-.view-homeShortcutsGrid-shortcut {
-    border-radius: 5px;
-}
-
 /* Fix placement of "your library" sidebar item */
 .main-yourLibraryX-header {
     padding: 8px 16.5px;
@@ -114,6 +119,19 @@ a[href="/marketplace"]>span.TypeElement-bodyMediumBold-bold-type {
     grid-template-columns: none;
 }
 
+
+
+/***************************************************************/
+
+/*
+ * Section: Bottom player controls
+*/
+
+/* Fix height of connect bar */
+.main-connectBar-connectBar {
+    height: auto;
+}
+
 /* Make progress bar rounded */
 .playback-bar .progress-bar {
     --progress-bar-radius: 10px !important;
@@ -124,6 +142,23 @@ a[href="/marketplace"]>span.TypeElement-bodyMediumBold-bold-type {
     padding-left: 5px;
 }
 
+/***************************************************************/
+
+/*
+ * Section: Other
+*/
+
+/* Fix theming of context menu button icons */
+.main-contextMenu-menuItemButton svg {
+    fill: var(--text-subdued);
+}
+
+/* Fix padding around selects/dropdowns */
+.main-dropDown-dropDown {
+    border-right: 0.375rem solid transparent !important;
+}
+
+/***************************************************************/
 
 /*
 ########################################################################
@@ -150,6 +185,31 @@ a[href="/marketplace"]>span.TypeElement-bodyMediumBold-bold-type {
 /* Full Screen: Fix placement of icon in now playing bar */
 .fsd-button>svg {
     vertical-align: middle;
+}
+
+/* Fix CSS Editor settings elements */
+/* Section title */
+#css-editor>div>h2 {
+    font-size: 1.5em !important;
+    color: var(--spice-text);
+}
+
+/* Open button */
+#css-editor>div>span>span>button {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    background-color: transparent;
+    border-radius: var(--encore-button-corner-radius, 9999px);
+    cursor: pointer;
+    padding-inline: calc(var(--encore-spacing-base, 16px) - 1px);
+    border: 1px solid var(--essential-subdued, #878787);
+    color: var(--text-base, #000000);
+    min-block-size: var(--encore-control-size-smaller, 32px);
+}
+
+/* Close button */
+.main-playlistEditDetailsModal-closeBtn {
+    fill: var(--spice-text)
 }
 
 
