@@ -85,6 +85,29 @@ select[id="desktop.equalizer.preset"] {
 /***************************************************************/
 
 /*
+ * Section: Artist Page
+*/
+
+/* Add border around "artist pick" background image */
+.guUl5dHbF5HJRvwjBxzR {
+    border-top-left-radius: var(--br-1);
+    border-top-right-radius: var(--br-1);
+}
+
+/* Add border around "artist pick" album artwork */
+.yWkJ7Ua3DnSTaHxG2qgv {
+    border-radius: var(--br-2)
+}
+
+/* Theme colours of "# in the world" badge */
+.tLjX9htIKD_OCmEX01UN {
+    background-color: var(--spice-button-active);
+    color: white;
+}
+
+/***************************************************************/
+
+/*
  * Section: Left Sidebar
 */
 
