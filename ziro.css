@@ -150,11 +150,6 @@ select[id="desktop.equalizer.preset"] {
  * Section: Bottom player controls
 */
 
-/* Fix height of connect bar */
-.main-connectBar-connectBar {
-    height: auto;
-}
-
 /* Make progress bar rounded */
 .playback-bar .progress-bar {
     --progress-bar-radius: 10px !important;
