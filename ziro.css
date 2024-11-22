@@ -20,6 +20,11 @@
     align-items: center;
 }
 
+/* Home filter chips (all, music, podcasts) */
+.main-home-filterChipsSection {
+    background-color: var(--spice-main) !important;
+}
+
 /***************************************************************/
 
 /*
@@ -39,8 +44,10 @@
 
 /* Fix spicetify marketplace header overlapping content */
 .marketplace-header {
-    top: 0;
-    padding-bottom: 0.5rem;
+    top: 0 !important;
+    height: 3.5rem;
+
+    background-color: var(--spice-main)
 }
 
 .marketplace-header__right {
@@ -122,20 +129,6 @@ select[id="desktop.equalizer.preset"] {
     padding-left: 2px;
 }
 
-/* Fix padding of left sidebar scrollable menu items */
-.fYWNdY4zhj4OX_T2Xtg6 {
-    padding: 6px 8px;
-}
-
-/* Fix placement of "your library" sidebar item */
-.main-yourLibraryX-header {
-    padding: 8px 16.5px;
-}
-
-.main-yourLibraryX-header .main-yourLibraryX-collapseButtonWrapper {
-    gap: 8.5px;
-}
-
 /* Fix centering of left sidebar album covers */
 .ZZsPF3Sn4h7m0_5Clhk0 {
     grid-gap: unset;
@@ -166,6 +159,17 @@ select[id="desktop.equalizer.preset"] {
  * Section: Other
 */
 
+/* Fix theming of text announcements */
+:root {
+    --text-announcement: var(--spice-button-active);
+    --essential-announcement: var(--spice-button-active);
+}
+
+/* Fix theming of some elements */
+.encore-dark-theme .encore-bright-accent-set {
+    --background-highlight: var(--spice-button) !important;
+}
+
 /* Fix theming of context menu button icons */
 .main-contextMenu-menuItemButton svg {
     fill: var(--text-subdued);
@@ -179,6 +183,15 @@ select[id="desktop.equalizer.preset"] {
 /* Fix padding around selects/dropdowns */
 .main-dropDown-dropDown {
     border-right: 0.375rem solid transparent !important;
+}
+
+/* Fix main search bar not taking up all provided space */
+.main-globalNav-searchContainer {
+    justify-content: space-evenly;
+}
+
+.main-globalNav-searchContainer>span {
+    width: 75%
 }
 
 /*
@@ -262,15 +275,9 @@ select[id="desktop.equalizer.preset"] {
     display: none;
 }
 
-.main-topBar-overlay,
 .main-view-container,
 .Root__nav-bar {
     background-color: var(--spice-main);
-}
-
-.main-topBar-background {
-    opacity: 1 !important;
-    background-color: var(--spice-main) !important;
 }
 
 * {
@@ -773,6 +780,17 @@ select[id="desktop.equalizer.preset"] {
     content-visibility: hidden;
 }
 
+.KYkSwfV1FCtD15TMChbH>img {
+    height: 20px;
+    width: 20px;
+
+    margin-left: 0.25rem;
+
+    mask-image: url("data:image/svg+xml,%3Csvg id='playing-icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3Cstyle%3E %23playing-icon %7B fill: %2320BC54; %7D @keyframes play %7B 0%25 %7Btransform: scaleY(1);%7D 3.3%25 %7Btransform: scaleY(0.9583);%7D 6.6%25 %7Btransform: scaleY(0.9166);%7D 9.9%25 %7Btransform: scaleY(0.8333);%7D 13.3%25 %7Btransform: scaleY(0.7083);%7D 16.6%25 %7Btransform: scaleY(0.5416);%7D 19.9%25 %7Btransform: scaleY(0.4166);%7D 23.3%25 %7Btransform: scaleY(0.25);%7D 26.6%25 %7Btransform: scaleY(0.1666);%7D 29.9%25 %7Btransform: scaleY(0.125);%7D 33.3%25 %7Btransform: scaleY(0.125);%7D 36.6%25 %7Btransform: scaleY(0.1666);%7D 39.9%25 %7Btransform: scaleY(0.1666);%7D 43.3%25 %7Btransform: scaleY(0.2083);%7D 46.6%25 %7Btransform: scaleY(0.2916);%7D 49.9%25 %7Btransform: scaleY(0.375);%7D 53.3%25 %7Btransform: scaleY(0.5);%7D 56.6%25 %7Btransform: scaleY(0.5833);%7D 59.9%25 %7Btransform: scaleY(0.625);%7D 63.3%25 %7Btransform: scaleY(0.6666);%7D 66.6%25 %7Btransform: scaleY(0.6666);%7D 69.9%25 %7Btransform: scaleY(0.6666);%7D 73.3%25 %7Btransform: scaleY(0.6666);%7D 76.6%25 %7Btransform: scaleY(0.7083);%7D 79.9%25 %7Btransform: scaleY(0.75);%7D 83.3%25 %7Btransform: scaleY(0.8333);%7D 86.6%25 %7Btransform: scaleY(0.875);%7D 89.9%25 %7Btransform: scaleY(0.9166);%7D 93.3%25 %7Btransform: scaleY(0.9583);%7D 96.6%25 %7Btransform: scaleY(1);%7D %7D %23bar1 %7B transform-origin: bottom; animation: play 0.9s -0.51s infinite; %7D %23bar2 %7B transform-origin: bottom; animation: play 0.9s infinite; %7D %23bar3 %7B transform-origin: bottom; animation: play 0.9s -0.15s infinite; %7D %23bar4 %7B transform-origin: bottom; animation: play 0.9s -0.75s infinite; %7D %3C/style%3E%3C/defs%3E%3Ctitle%3Eplaying-icon%3C/title%3E%3Crect id='bar1' class='cls-1' width='4' height='24'/%3E%3Crect id='bar2' class='cls-1' x='6' width='4' height='24'/%3E%3Crect id='bar3' class='cls-1' x='12' width='4' height='24'/%3E%3Crect id='bar4' class='cls-1' x='18' width='4' height='24'/%3E%3C/svg%3E");
+    background: var(--spice-text);
+    content-visibility: hidden;
+}
+
 .main-trackList-filterHighlight {
     background-color: var(--spice-button);
     color: var(--spice-shadow);
@@ -829,7 +847,8 @@ path[fill='#1ed760'] {
 }
 
 /* settings */
-.x-toggle-indicator {
+div[class^='x-settings']>.x-toggle-wrapper>.x-toggle-indicatorWrapper>.x-toggle-indicator,
+div[class^='x-settings']>div>.x-toggle-wrapper>.x-toggle-indicatorWrapper>.x-toggle-indicator {
     height: 18px;
     width: 18px;
     top: 3px;
@@ -976,13 +995,4 @@ label.Type__TypeElement-goli3j-0.gCwing.main-playlistEditDetailsModal-textElemen
 /*about artist card text*/
 .artist-artistAbout-container.artist-artistAbout-backgroundImage .artist-artistAbout-content>div {
     color: #fff;
-}
-
-/* fix spacing between play button and page title */
-.main-entityHeader-topbarTitle {
-    margin-left: 10px;
-}
-
-.main-topBar-topbarContent {
-    margin-left: 15px;
 }
